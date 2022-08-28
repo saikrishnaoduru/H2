@@ -1,4 +1,4 @@
-FROM tomcat:8.0.20-jre8
-COPY target/demo-0.0.1.jar demo-0.0.1.jar
+FROM openjdk:11
+COPY target/demo-0.0.1-SNAPSHOT.jar /
 WORKDIR /
-CMD ["java", "-jar", "demo-0.0.1.jar"]
+CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
